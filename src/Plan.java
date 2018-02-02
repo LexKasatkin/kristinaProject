@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Plan  extends Reserve {
-    String date;
+    private String date;
 
     public String getDate() {
         return date;
@@ -16,7 +16,8 @@ public class Plan  extends Reserve {
     }
 
     @Override
-    void getData(Scanner scanner) {
+    void getData(String string) {
+        Scanner scanner=new Scanner(string);
         super.getData(scanner);
         if(scanner.hasNext()) {
             this.date = scanner.next();

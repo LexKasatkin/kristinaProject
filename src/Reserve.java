@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Reserve {
-    String detail;
-    int amount;
+    private String detail;
+    private int amount;
 
     public String getDetail() {
         return detail;
@@ -26,7 +26,8 @@ public class Reserve {
         this.amount=0;
     }
 
-    void getData(Scanner scanner){
+    void getData(String string){
+        Scanner scanner=new Scanner(string);
         if(scanner.hasNext()){
             this.detail=scanner.next();
         }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Purchase extends Reserve{
-    String quarter;
+    private String quarter;
 
     public String getQuarter() {
         return quarter;
@@ -17,7 +17,8 @@ public class Purchase extends Reserve{
     }
 
     @Override
-    void getData(Scanner scanner) {
+    void getData(String string) {
+        Scanner scanner=new Scanner(string);
         super.getData(scanner);
         if(scanner.hasNext()) {
             this.quarter = scanner.next();
